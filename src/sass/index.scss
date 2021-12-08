@@ -1,5 +1,5 @@
 // @use "./layouts";
-// @use "./pages";
+@use "./pages";
 @use "./abstracts" as *;
 @use "./base" as *;
 @use "./components";
@@ -12,9 +12,4 @@
 
 html {
   font-size: 62.5%;
-}
-
-body {
-  margin-right: auto;
-  margin-left: auto;
 }
