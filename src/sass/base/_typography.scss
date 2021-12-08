@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+@use "./font-face" as *;
+
+header .right > a,
+header .right > h5,
+p {
+  font-family: $bookman-old-style;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fanklin-gothic;
+}
+
+a {
+  font-family: $protestant;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+$font-sizes: (
+  h1: clamp(4rem, 10vw, 10rem),
+  h2: clamp(2.2rem, 5vw, 5.6rem),
+  h3: clamp(2.2rem, 5vw, 2.6rem),
+  h4: clamp(2rem, 1.5vw, 2.4rem),
+  h5: clamp(1.8rem, 1.5vw, 2rem),
+  h6: clamp(1.4rem, 1.5vw, 1.6rem),
+  a: auto,
+  p: clamp(1.2rem, 1.5vw, 1.6rem),
+  title: 1.6rem,
+);
+
+@each $tag, $size in $font-sizes {
+  #{$tag} {
+    font-size: $size;
+  }
+}

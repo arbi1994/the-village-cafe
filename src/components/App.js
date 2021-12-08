@@ -2,12 +2,10 @@ import React from 'react';
 import { 
   BrowserRouter as Router, 
   Routes, 
-  Route, 
-  Link
+  Route,
 } from 'react-router-dom';
 // components
 import Header from './Header';
-import Navbar from './Navbar';
 import Home from './home/Home';
 import About from './about/About';
 import Menus from './menus/Menus';
@@ -21,7 +19,6 @@ function App() {
   return (
     <Router>
       <Header />
-      <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
