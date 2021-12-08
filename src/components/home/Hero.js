@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import imgLeft from '../../assets/Images/Home/hero-left.jpg';
 import imgRight from '../../assets/Images/Home/hero-right.jpg';
 
@@ -14,10 +15,10 @@ export default function Hero() {
           </p>
         </div>
         
-        <img alt="hero-img-left" src={imgLeft} />
+        <LazyLoadImage alt="hero-img-left" src={imgLeft} threshold="200" />
       </div>
       <div className="home__hero--photo">
-        <img alt="hero-img-right" src={imgRight} />
+        <LazyLoadImage alt="hero-img-right" src={imgRight} />
       </div>
     </section>
   )

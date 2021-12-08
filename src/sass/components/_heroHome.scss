@@ -5,14 +5,19 @@
   height: 100%;
   @include flex(row, center, center);
   flex-wrap: wrap;
+  background: $brown-background;
+
+  @include media("<tablet") {
+    @include flex(column, center, center);
+  }
 
   &--description {
-    flex: 1 0 35em;
+    flex: 1;
     @include flex(column, center, center);
     color: $white-text-color;
     z-index: 1;
     position: relative;
-    aspect-ratio: 995/1000;
+    aspect-ratio: 1/1;
     height: 100%;
 
     &::after {
@@ -72,13 +77,13 @@
   }
 
   &--photo {
-    flex: 1 0 35em;
-    aspect-ratio: 995/1000;
+    flex: 1;
+    aspect-ratio: 1/1;
     display: flex;
 
     @include media("<tablet") {
       order: 1;
-      aspect-ratio: auto;
+      // aspect-ratio: auto;
     }
 
     img {

@@ -8,7 +8,7 @@ export default function Home() {
     <section className="home">
       {/* <div className="home__hero"></div> */}
       <Hero />
-      {/* <Main /> */}
+      <Main />
     </section>
   )
 }

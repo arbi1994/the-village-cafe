@@ -5,7 +5,6 @@ nav {
   width: 100%;
   padding: $desktop-padding;
   @include flex(row, center, center);
-  // box-shadow: 0px 30px 20px 0px #f8f8f8;
   background: white;
   z-index: 1;
 
@@ -24,7 +23,7 @@ nav {
   @include media("<=tablet") {
     display: block;
     position: fixed;
-    top: calc(10 * 1vh);
+    top: calc(5 * 1vh);
     right: calc(5 * 1vw);
     z-index: 5;
   }

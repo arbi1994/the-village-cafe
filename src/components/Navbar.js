@@ -5,17 +5,14 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 // utils
 import navigation from '../utils/navigation';
-// hooks
-import useViewport from '../hooks/useViewport';
 
 const Navbar = ({ headerHeight, menuClicked, handleClick }) => {
   const ref = useRef()
-  const [width, height] = useViewport()
   const [navHeight, setNavHeight] = useState(undefined)
 
   useEffect(() => {
     setNavHeight(ref.current.getBoundingClientRect().height) 
-  }, [width, height])
+  }, [])
 
   useEffect(() => {
     const isSticky = () => {
@@ -27,11 +24,10 @@ const Navbar = ({ headerHeight, menuClicked, handleClick }) => {
     }
 
     window.addEventListener('scroll', isSticky)
-    
     return () => window.removeEventListener('scroll', isSticky)
   })
 
-  
+  console.log("headerHeight", headerHeight)
 
   return (
     <nav ref={ref}>
