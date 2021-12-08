@@ -26,6 +26,11 @@
       z-index: -1;
     }
 
+    @include media("<tablet") {
+      order: 2;
+      aspect-ratio: auto;
+    }
+
     .wrapper {
       @include flex(column, center, center);
       padding: 5em;
@@ -48,6 +53,7 @@
 
     p {
       line-height: clamp(25px, 4vw, 45px);
+      width: 100%;
 
       span {
         font-style: italic;
@@ -69,6 +75,11 @@
     flex: 1 0 35em;
     aspect-ratio: 995/1000;
     display: flex;
+
+    @include media("<tablet") {
+      order: 1;
+      aspect-ratio: auto;
+    }
 
     img {
       width: 100%;

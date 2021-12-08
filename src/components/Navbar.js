@@ -18,17 +18,20 @@ const Navbar = ({ headerHeight, menuClicked, handleClick }) => {
   }, [width, height])
 
   useEffect(() => {
+    const isSticky = () => {
+      const scrollTop = window.scrollY
+  
+      scrollTop >= headerHeight - navHeight
+      ? ref.current.classList.add('is-sticky') 
+      : ref.current.classList.remove('is-sticky')
+    }
+
     window.addEventListener('scroll', isSticky)
+    
     return () => window.removeEventListener('scroll', isSticky)
   })
 
-  const isSticky = () => {
-    const scrollTop = window.scrollY
-
-    scrollTop >= headerHeight - navHeight
-    ? ref.current.classList.add('is-sticky') 
-    : ref.current.classList.remove('is-sticky')
-  }
+  
 
   return (
     <nav ref={ref}>
