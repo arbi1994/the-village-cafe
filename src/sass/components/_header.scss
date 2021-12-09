@@ -3,7 +3,6 @@
 header {
   width: 100%;
   position: relative;
-  // min-height: 20.28em;
 
   @include media("<tablet") {
     height: 18em;
