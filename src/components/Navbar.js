@@ -24,6 +24,7 @@ const Navbar = ({ headerHeight, menuClicked, handleClick }) => {
     }
 
     window.addEventListener('scroll', isSticky)
+    
     return () => window.removeEventListener('scroll', isSticky)
   })
 

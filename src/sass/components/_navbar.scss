@@ -19,6 +19,7 @@ nav {
   background: $cream-background;
   display: none;
   cursor: pointer;
+  box-shadow: 4px 4px 10px 0px rgb(0 0 0 / 10%);
 
   @include media("<=tablet") {
     display: block;

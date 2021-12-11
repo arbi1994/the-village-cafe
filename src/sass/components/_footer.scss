@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.footer {
+  border: 1px solid white;
+  min-height: 100vh;
+  background: $cream-background;
+}

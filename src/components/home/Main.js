@@ -7,7 +7,6 @@ import imgBottom from '../../assets/Images/Home/home-img-3.jpg';
 export default function Main() {
   return (
     <main>
-    
       <section className="container">
         <div className="container__wrapper">
           <section className="img-wrapper">

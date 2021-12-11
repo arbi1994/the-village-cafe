@@ -39,6 +39,10 @@
     .wrapper {
       @include flex(column, center, center);
       padding: 5em;
+
+      @include media("<=tablet") {
+        padding: 2.5em;
+      }
     }
 
     h1,
@@ -47,9 +51,8 @@
     }
 
     h1 {
-      width: 5em;
       font-style: italic;
-      margin-bottom: 0.5em;
+      line-height: 1.25em;
 
       @include media("<tablet") {
         width: 100%;
@@ -57,8 +60,13 @@
     }
 
     p {
+      margin-top: 5.5em;
       line-height: clamp(25px, 4vw, 45px);
       width: 100%;
+
+      @include media("<=tablet") {
+        margin-top: 2.5em;
+      }
 
       span {
         font-style: italic;
@@ -89,5 +97,23 @@
     img {
       width: 100%;
     }
+  }
+}
+
+.second-hero {
+  order: 2;
+  background: $cream-background;
+  color: $brown-background;
+
+  &::after {
+    display: none;
+  }
+}
+
+.no-overlay {
+  background: $brown-background;
+
+  &::after {
+    display: none;
   }
 }

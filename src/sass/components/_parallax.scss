@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.parallax {
+  width: 100%;
+  height: 40vh;
+
+  @include media("<=tablet") {
+    height: 20vh;
+  }
+
+  @include media("<=phoneL") {
+    height: 10vh;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
