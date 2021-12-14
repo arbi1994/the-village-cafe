@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.contact {
+  &__main {
+    // border: 1px solid black;
+    padding: $desktop-padding;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+
+    @include media("<tablet") {
+      padding: $mobile-padding;
+      padding-top: 5vw;
+      padding-bottom: 5vw;
+    }
+  }
+}

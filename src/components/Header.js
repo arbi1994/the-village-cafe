@@ -7,15 +7,12 @@ import logoPhone from '../assets/Images/Logo/logo-mobile.svg';
 import headerImg from '../assets/Images/Header/Header-top-center.svg';
 // components
 import Navbar from './Navbar';
+// utils
+import breakpoints from '../utils/breakpoints';
 
 export default function Header() {
   const ref = useRef()
   const [headerHeight, setHeaderHeight] = useState(0)
-  const [menuClicked, setMenuClicked] = useState(false);
-
-  const handleClick = () => {
-    setMenuClicked(!menuClicked);
-  }
 
   // set Hero element height
   useEffect(() => { 
@@ -30,7 +27,7 @@ export default function Header() {
       
       <div className="wrapper">
         <div className="left">
-          <Link className="logo" to="/">
+          <Link className="logo" to="/" style={{height: '100%'}}>
             <img  
               alt="" 
               src={logoPhone}
@@ -41,15 +38,11 @@ export default function Header() {
 
         <div className="right">
           <h6>Phone</h6>
-          <a href="tel:0398570734">(03) 9857 0734</a>
+          <a href="tel:0398570734" rel="nofollow">(03) 9857 0734</a>
         </div>
       </div>
 
-      <Navbar
-        headerHeight={headerHeight} 
-        menuClicked={menuClicked} 
-        handleClick={handleClick}
-      />
+      <Navbar headerHeight={headerHeight} />
     </header>
   )
 }

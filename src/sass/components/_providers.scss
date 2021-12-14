@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.contact__main--providers {
+  padding: 2em 0;
+
+  .header {
+    width: 100%;
+    height: 8vw;
+    text-align: center;
+
+    @include media("<=phoneL") {
+      margin-bottom: 2em;
+    }
+  }
+
+  .main {
+    width: 100%;
+    @include flex(row, center, center);
+
+    .wrapper {
+      flex: 1;
+      height: 15vw;
+      @include flex(row, center, center);
+      transition: box-shadow 0.5s ease;
+
+      &:hover {
+        box-shadow: 4px 4px 10px 0px rgb(0 0 0 / 10%);
+      }
+    }
+
+    img {
+      width: 22em;
+
+      @include media("<=SMdesktop") {
+        width: 15em;
+      }
+
+      @include media("<=tablet") {
+        width: 8em;
+      }
+
+      @include media("<=phoneL") {
+        width: 6em;
+      }
+    }
+  }
+}

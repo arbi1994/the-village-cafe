@@ -1,0 +1,131 @@
+@use "../abstracts" as *;
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  // background: $brown-background;
+  grid-auto-flow: dense;
+  width: 100%;
+  height: calc(50 * 1vw);
+
+  @include media("<tablet") {
+    @include flex(column, center, flex-start);
+    height: auto;
+  }
+
+  &__text-container {
+    @include flex(column, center, center);
+    color: $white-text-color;
+    z-index: 1;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(62, 28, 0, 0.9);
+      z-index: -1;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    @include media("<tablet") {
+      order: 2;
+    }
+  }
+
+  .wrapper {
+    @include flex(column, center, center);
+    padding: 5em;
+
+    @include media("<=tablet") {
+      padding: 2.5em;
+    }
+
+    @include media("<tablet") {
+      min-height: 50vh;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    h1 {
+      font-style: italic;
+      line-height: 1.25em;
+
+      @include media("<tablet") {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin-top: 5.5vw;
+      line-height: clamp(25px, 4vw, 45px);
+      width: 100%;
+
+      @include media("<=SMdesktop") {
+        text-align: left;
+      }
+
+      @include media("<=tablet") {
+        margin-top: 2.5em;
+      }
+
+      @include media("<tablet") {
+        text-align: center;
+      }
+
+      @include media("<phoneL") {
+        text-align: left;
+      }
+
+      span {
+        font-style: italic;
+      }
+    }
+  }
+
+  &__photo-container {
+    @include media("<tablet") {
+      height: 100vw;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1.02/1;
+    }
+  }
+}
+
+.no-overlay {
+  background: $brown-background;
+
+  &::after {
+    display: none;
+  }
+}
+
+.second-hero {
+  grid-column: 2;
+  background: $cream-background;
+  color: $brown-background;
+  width: 100%;
+
+  &::after {
+    display: none;
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Hero({ header, subHeader, paragraph, firstImg, secondImg }) {
   const { pathname } = useLocation();
@@ -10,13 +9,23 @@ export default function Hero({ header, subHeader, paragraph, firstImg, secondImg
    * @returns String
    */
   const className = () => {
-    if(pathname === '/about' || pathname === '/contact') return "home__hero--description second-hero"
-    if(pathname === '/menus') return 'home__hero--description no-overlay'
-    return 'home__hero--description'
+    if(pathname === '/about' || pathname === '/contact') return "hero__text-container second-hero"
+    if(pathname === '/menus') return 'hero__text-container no-overlay'
+    return 'hero__text-container'
   }
   
+  /**
+   * Render the correct image according to the pathname
+   * @returns Node element
+   */
+  const renderImage = () => {
+    if(pathname === '/about' || pathname === '/contact' || pathname === '/menus') return
+
+    return <img alt="hero-img-left" src={firstImg} />
+  }
+
   return (
-    <section className="home__hero">
+    <section className="hero">
       <div className={className()}>
 
         <div className="wrapper">
@@ -25,15 +34,11 @@ export default function Hero({ header, subHeader, paragraph, firstImg, secondImg
           <p>{paragraph}</p>
         </div>
         
-        {
-          pathname === '/about' || pathname === '/contact' || pathname === '/menus'
-            ? null
-            : <LazyLoadImage alt="hero-img-left" src={firstImg} threshold="500" />
-        }
+        {renderImage()}
         
       </div>
-      <div className="home__hero--photo">
-        <LazyLoadImage alt="hero-img-right" src={secondImg || firstImg} threshold="500" />
+      <div className="hero__photo-container">
+        <img alt="hero-img-right" src={secondImg || firstImg} />
       </div>
     </section>
   )

@@ -3,6 +3,9 @@
 
 header .right > a,
 header .right > h5,
+.footer__top--address,
+.footer__bottom--left,
+a,
 p {
   font-family: $bookman-old-style;
 }
@@ -12,27 +15,33 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+strong {
   font-family: $fanklin-gothic;
 }
 
-a {
+li,
+.nav-link {
   font-family: $protestant;
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 45px;
+
+  @include media("<=tablet") {
+    line-height: 35px;
+  }
 }
 
 $font-sizes: (
   h1: clamp(4rem, 5vw, 8rem),
   h2: clamp(2.2rem, 5vw, 5.6rem),
   h3: clamp(2.2rem, 5vw, 2.6rem),
-  h4: clamp(2rem, 1.5vw, 2.4rem),
+  h4: clamp(2rem, 2.5vw, 2.4rem),
   h5: clamp(1.8rem, 1.5vw, 2rem),
   h6: clamp(1.4rem, 1.5vw, 1.6rem),
   a: auto,
-  p: clamp(1.6rem, 1.5vw, 2.4rem),
+  p: clamp(1.6rem, 2.5vw, 2.4rem),
   title: 1.6rem,
 );
 

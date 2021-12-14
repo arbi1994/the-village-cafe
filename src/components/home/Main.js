@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+// images
 import imgLeft from '../../assets/Images/Home/home-img-1.jpg';
 import imgRight from '../../assets/Images/Home/home-img-2.jpg';
 import imgBottom from '../../assets/Images/Home/home-img-3.jpg';
@@ -11,10 +13,10 @@ export default function Main() {
         <div className="container__wrapper">
           <section className="img-wrapper">
             <div className="img first">
-              <img alt="" src={imgLeft} />
+              <LazyLoadImage alt="" src={imgLeft} />
             </div>
             <div className="img second">
-              <img alt="" src={imgRight} />
+              <LazyLoadImage alt="" src={imgRight} />
             </div>
             <div className="description">
               <div className="description__wrapper">
@@ -23,7 +25,7 @@ export default function Main() {
               </div>
             </div>
             <div className="img third">
-              <img alt="" src={imgBottom} />
+              <LazyLoadImage alt="" src={imgBottom} />
             </div> 
           </section>
         </div>

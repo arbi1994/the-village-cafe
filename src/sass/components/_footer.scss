@@ -1,7 +1,124 @@
 @use "../abstracts" as *;
 
 .footer {
-  border: 1px solid white;
-  min-height: 100vh;
+  width: 100%;
   background: $cream-background;
+
+  ul {
+    height: 22em;
+    @include flex(column, flex-start, flex-start);
+
+    @include media("<tablet") {
+      height: 100%;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    padding-bottom: 2em;
+
+    @include media("<tablet") {
+      padding-bottom: 1.5em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $brown-background;
+    font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  strong {
+    font-size: clamp(1.8rem, 2.5vw, 2rem);
+  }
+
+  &__top {
+    min-height: 50vh;
+    width: 100%;
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    padding: $desktop-padding;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    @include media("<tablet") {
+      @include flex(column, flex-start, flex-start);
+      padding: $mobile-padding;
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+
+    &--menu,
+    &--socials,
+    &--address,
+    &--contact {
+      flex: 1 0 20em;
+      height: 25em;
+
+      @include media("<tablet") {
+        width: 100%;
+        flex: 1;
+        padding: 1em 0;
+      }
+    }
+
+    &--address,
+    &--contact {
+      .main {
+        color: $grey-text-color;
+        font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+        line-height: 30px;
+      }
+    }
+
+    &--address,
+    &--contact {
+      .header {
+        padding-bottom: 1em !important;
+      }
+
+      .header:nth-child(3) {
+        padding-top: 4em !important;
+      }
+    }
+  }
+
+  .header {
+    padding-bottom: 2em;
+
+    @include media("<tablet") {
+      padding-bottom: 2em;
+    }
+  }
+
+  &__bottom {
+    min-height: 10vh;
+    padding: $desktop-padding;
+    @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    color: $grey-text-color;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    letter-spacing: 1px;
+
+    @include media("<=tablet") {
+      padding: $mobile-padding;
+    }
+
+    &--right {
+      @include flex(row, center, center);
+
+      span {
+        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+        margin-right: 0.5em;
+      }
+
+      img {
+        width: clamp(1.6em, 2.5vw, 2em);
+      }
+    }
+  }
 }

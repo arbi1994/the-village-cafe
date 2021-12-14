@@ -103,9 +103,10 @@ nav {
 
   .nav-link {
     text-decoration: none;
-    font-size: clamp(1.8rem, 1.5vw, 3.6rem);
+    font-size: clamp(1.8rem, 2.5vw, 2rem);
     color: $black-text-color;
     letter-spacing: 3px;
+    text-transform: uppercase;
 
     @include media("<=tablet") {
       color: $brown-background;
@@ -124,13 +125,13 @@ nav {
 
     h5 {
       margin-right: 1em;
-      color: $grey-text-color;
+      color: black;
     }
 
     a {
       text-decoration: none;
-      color: $grey-text-color;
-      font-size: clamp(1.8rem, 1.5vw, 2.4rem);
+      color: $brown-background;
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     }
   }
 }

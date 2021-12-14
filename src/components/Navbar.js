@@ -5,10 +5,22 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 // utils
 import navigation from '../utils/navigation';
+// hooks
+import useOnClickOutside from '../hooks/useOnClickOutside';
 
-const Navbar = ({ headerHeight, menuClicked, handleClick }) => {
+const Navbar = ({ headerHeight }) => {
   const ref = useRef()
-  const [navHeight, setNavHeight] = useState(undefined)
+  const [navHeight, setNavHeight] = useState()
+  const [menuClicked, setMenuClicked] = useState(false);
+  useOnClickOutside(ref, () => setMenuClicked(false))
+
+  const handleClick = () => {
+    setMenuClicked(!menuClicked);
+  }
+
+  const handleLinkClick = () => {
+    setMenuClicked(false);
+  }
 
   useEffect(() => {
     setNavHeight(ref.current.getBoundingClientRect().height) 
@@ -42,7 +54,7 @@ const Navbar = ({ headerHeight, menuClicked, handleClick }) => {
       <div className={!menuClicked ? "inner-wrapper" : "inner-wrapper active"}>
         <ul className={!menuClicked ? "navbar" : "navbar active"}>
           {navigation.map(nav => 
-            <li onClick={handleClick}>
+            <li onClick={handleLinkClick}>
               <Link 
                 className="nav-link underlined underlined--offset" 
                 key={nav.id} 
