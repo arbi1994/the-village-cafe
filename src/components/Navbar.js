@@ -61,10 +61,9 @@ const Navbar = ({ headerHeight }) => {
       <div className={!menuClicked ? "inner-wrapper" : "inner-wrapper active"}>
         <ul className={!menuClicked ? "navbar" : "navbar active"}>
           {navigation.map(nav => 
-            <li onClick={handleLinkClick}>
+            <li key={nav.id}  onClick={handleLinkClick}>
               <Link 
                 className="nav-link underlined underlined--offset" 
-                key={nav.id} 
                 to={nav.path}
               >{nav.label}</Link>
             </li>

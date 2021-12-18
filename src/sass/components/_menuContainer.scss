@@ -8,21 +8,21 @@
 
   h3 {
     text-align: center;
-    padding: 1em;
+    padding: 2em 0;
+    letter-spacing: 2px;
   }
 
   .menu-wrapper {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-auto-flow: column;
-    gap: 2em;
-    overflow-x: scroll;
+    gap: 4em;
     overflow-y: hidden;
   }
 
   .meal-container {
     padding: 1em 0;
-    min-width: 40em;
+    min-width: 35em;
 
     @include media("<=tablet") {
       min-width: 30em;

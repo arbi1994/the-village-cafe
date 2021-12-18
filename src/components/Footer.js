@@ -7,7 +7,7 @@ import developerLogo from '../assets/Images/Logo/RB.svg';
 
 export default function Footer() {
   const menu = navLinks.map((link, index) => {
-    return <li><Link key={index} to={link.path} href={link.id}>{link.label}</Link></li>
+    return <li key={index}><Link to={link.path} href={link.id}>{link.label}</Link></li>
   })
 
   return (

@@ -25,7 +25,7 @@ const MenuContainer = ({ selectedBtn }) => {
   const container = Object.entries(selectedBtn === "EAT" ? food : drinks).map((key, value) => {
 
     return (
-      <div className="menu__container">
+      <div key={value} className="menu__container">
         <h3>{title(key[0])}</h3>
     
         <div className="menu-wrapper">
@@ -36,7 +36,7 @@ const MenuContainer = ({ selectedBtn }) => {
               <p className="meal-description">{meal.description}</p>
               <div className="meal-extra">
                 {meal?.extras?.map(extra => (
-                    <p className="meal-description">{extra}</p>
+                    <p key={extra} className="meal-description">{extra}</p>
                   ))
                 }
               </div>

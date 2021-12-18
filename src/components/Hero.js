@@ -22,7 +22,7 @@ export default function Hero({ header, subHeader, paragraph, firstImg, secondImg
     if(pathname === '/about' || pathname === '/contact' || pathname === '/menus') return
 
     setBackgroundImg(<img alt="hero-img-left" src={firstImg} />)
-  }, [pathname])
+  }, [pathname, firstImg])
 
   return (
     <section className="hero">

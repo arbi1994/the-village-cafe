@@ -321,7 +321,7 @@ export const food = {
       description: "see our display",
     },
     {
-      name: "HOMEMADE VALILLA SLICE",
+      name: "HOMEMADE VANILLA SLICE",
     },
     {
       name: "FRUIT SALAD",
@@ -335,7 +335,7 @@ export const drinks = {
   hot: [
     {
       name: "COFFEE",
-      options: "almond | soy | oat | lactos free",
+      options: "almond | soy | oat | lactose free",
       description: "short black | short macchiato | latte | capuccino | flat white | long macchiato | magic | ristretto latte",
       extras: ["+ caramel | vanilla | hazelnut"]
     },
@@ -493,19 +493,12 @@ export const drinks = {
       name: "CIDER", 
     },
     {
-      name: "ESPRESSO MARTINI", 
+      name: "COCKTAILS",
+      extras: ["Espresso Martini", "Aperol Spritz", "Gin & Tonic"] 
     },
     {
-      name: "APEROL SPRITZ", 
-    },
-    {
-      name: "GIN & TONIC", 
-    },
-    {
-      name: "SCOTCH", 
-    },
-    {
-      name: "VODKA", 
+      name: "Spirit",
+      extras: ["Scotch", "Vodka"] 
     },
   ]
 }

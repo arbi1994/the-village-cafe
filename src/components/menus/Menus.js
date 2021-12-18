@@ -6,7 +6,6 @@ import MenuContainer from './MenuContainer';
 import image from '../../assets/Images/Menu/hero.jpg';
 
 export default function Menus() {
-  const [btnClicked, setBtnClicked] = useState(false);
   const [selectedBtn, setSelectedBtn] = useState(() => "EAT");
 
   const menuData = {
@@ -15,7 +14,6 @@ export default function Menus() {
   }
 
   const handleClick = (e) => {
-    setBtnClicked(true)
     setSelectedBtn(e.target.innerText)
   }
 
@@ -29,8 +27,14 @@ export default function Menus() {
 
       <div className="menu__main">
         <div className="menu__options">
-          <button className="btn" onClick={handleClick}>EAT</button>
-          <button className="btn" onClick={handleClick}>DRINK</button>
+          <button 
+            className={`btn ${selectedBtn === 'EAT' ? 'activeBtn' : ''}`} 
+            onClick={handleClick}
+          >EAT</button>
+          <button 
+            className={`btn ${selectedBtn === 'DRINK' ? 'activeBtn' : ''}`} 
+            onClick={handleClick}
+          >DRINK</button>
         </div>
 
         <MenuContainer selectedBtn={selectedBtn}/>
