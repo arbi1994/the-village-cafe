@@ -5,13 +5,16 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 // utils
 import navigation from '../utils/navigation';
+import breakpoints from '../utils/breakpoints';
 // hooks
 import useOnClickOutside from '../hooks/useOnClickOutside';
+import useViewport from '../hooks/useViewport';
 
 const Navbar = ({ headerHeight }) => {
   const ref = useRef()
   const [navHeight, setNavHeight] = useState()
   const [menuClicked, setMenuClicked] = useState(false);
+  const [width] = useViewport()
   useOnClickOutside(ref, () => setMenuClicked(false))
 
   const handleClick = () => {
@@ -29,10 +32,14 @@ const Navbar = ({ headerHeight }) => {
   useEffect(() => {
     const isSticky = () => {
       const scrollTop = window.scrollY
-  
-      scrollTop >= headerHeight - navHeight
-      ? ref.current.classList.add('is-sticky') 
-      : ref.current.classList.remove('is-sticky')
+
+      if(scrollTop >= headerHeight - navHeight && width > breakpoints.tablet){
+        ref.current.classList.add('is-sticky')
+        document.querySelector(".main").style.paddingTop = "10em"
+      }else {
+        ref.current.classList.remove('is-sticky')
+        document.querySelector(".main").style.paddingTop = "0"
+      }
     }
 
     window.addEventListener('scroll', isSticky)

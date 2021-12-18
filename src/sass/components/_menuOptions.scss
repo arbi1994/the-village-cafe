@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.menu__options {
+  width: 100%;
+  min-height: 10vh;
+  padding: $desktop-padding;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  @include flex(row, center, center);
+
+  .btn {
+    padding: 1em 4em;
+    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+    font-weight: bold;
+    border: 1px solid $brown-background;
+    background: $white-text-color;
+    color: $brown-background;
+    transition: all 0.35s ease;
+    cursor: pointer;
+
+    @include media("<=phoneL") {
+      padding: 0.5em 3em;
+    }
+
+    &:hover {
+      background: $brown-background;
+      color: $white-text-color;
+    }
+  }
+
+  .activeBtn {
+    background: $brown-background;
+    color: $white-text-color;
+  }
+}
+
+

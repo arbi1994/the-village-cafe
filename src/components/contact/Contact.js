@@ -84,7 +84,7 @@ export default function Contact() {
   ]
 
   return (
-    <section className="contact">
+    <section className="main contact">
       <Hero 
         header={contactData.header} 
         subHeader={contactData.subHeader} 
@@ -123,12 +123,11 @@ export default function Contact() {
           <div className="wrapper">
             <iframe 
               title="map" 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.873647963012!2d145.06958941531815!3d-37.79300077975613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646caac5eada9%3A0x611cac8d3e5b48d3!2sThe%20Village%20Cafe!5e0!3m2!1sit!2sau!4v1639402241378!5m2!1sit!2sau" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.873647963012!2d145.06958941531815!3d-37.79300077975613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646caac5eada9%3A0x611cac8d3e5b48d3!2sThe%20Village%20Cafe!5e0!3m2!1sen!2sau!4v1639402241378!5m2!1sen!2sau" 
               style={{border: "0"}} 
               allowFullScreen="" 
               loading="lazy"></iframe>
           </div>
-         
         </div>
       </section>
     </section>

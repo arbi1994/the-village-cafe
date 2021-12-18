@@ -7,8 +7,6 @@ import logoPhone from '../assets/Images/Logo/logo-mobile.svg';
 import headerImg from '../assets/Images/Header/Header-top-center.svg';
 // components
 import Navbar from './Navbar';
-// utils
-import breakpoints from '../utils/breakpoints';
 
 export default function Header() {
   const ref = useRef()

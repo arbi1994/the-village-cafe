@@ -17,13 +17,13 @@ export default function Footer() {
           <div className="header">
             <strong>Main menu</strong>
           </div>
-          <ul className="main">{menu}</ul>
+          <ul className="main-container">{menu}</ul>
         </div>
         <div className="footer__top--socials">
           <div className="header">
             <strong>Social media</strong>
           </div>
-          <ul className="main">
+          <ul className="main-container">
             <li>
               <a 
                 className="link" 
@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="header">
             <strong>Address</strong>
           </div>
-          <div className="main">
+          <div className="main-container">
             2/74 Doncaster Rd<br />Balwyn North<br />VIC<br />3104<br />
           </div>
         </div>
@@ -53,13 +53,13 @@ export default function Footer() {
           <div className="header">
             <strong>Phone</strong>
           </div>
-          <div className="main">
+          <div className="main-container">
             <a href="tel:0398570734" rel="nofollow">(03) 9857 0734</a>
           </div>
           <div className="header">
             <strong>Email</strong>
           </div>
-          <div className="main">
+          <div className="main-container">
             <a href="mailto:samirfreijah@hotmail.com" rel="nofollow">samirfreijah@hotmail.com</a>
           </div>
         </div>

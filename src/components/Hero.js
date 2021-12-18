@@ -1,32 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function Hero({ header, subHeader, paragraph, firstImg, secondImg }) {
   const { pathname } = useLocation();
+  const [className, setClassName] = useState();
+  const [backgroundImg, setBackgroundImg] = useState();
 
   /**
    * Set classnames according to the pathname
-   * @returns String
    */
-  const className = () => {
-    if(pathname === '/about' || pathname === '/contact') return "hero__text-container second-hero"
-    if(pathname === '/menus') return 'hero__text-container no-overlay'
-    return 'hero__text-container'
-  }
+  useEffect(() => {
+    if(pathname === '/about' || pathname === '/contact') setClassName("hero__text-container second-hero")
+    if(pathname === '/menus') setClassName('hero__text-container no-overlay')
+    if(pathname === '/') setClassName('hero__text-container')
+  }, [pathname])
   
   /**
    * Render the correct image according to the pathname
-   * @returns Node element
    */
-  const renderImage = () => {
+  useEffect(() => {
     if(pathname === '/about' || pathname === '/contact' || pathname === '/menus') return
 
-    return <img alt="hero-img-left" src={firstImg} />
-  }
+    setBackgroundImg(<img alt="hero-img-left" src={firstImg} />)
+  }, [pathname])
 
   return (
     <section className="hero">
-      <div className={className()}>
+      <div className={className}>
 
         <div className="wrapper">
           <h1>{header}</h1>
@@ -34,7 +34,7 @@ export default function Hero({ header, subHeader, paragraph, firstImg, secondImg
           <p>{paragraph}</p>
         </div>
         
-        {renderImage()}
+        {backgroundImg}
         
       </div>
       <div className="hero__photo-container">

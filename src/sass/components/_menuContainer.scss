@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.menu__container {
+  width: 100%;
+  padding: $mobile-padding;
+  background: $cream-background;
+  padding-bottom: 2em;
+
+  h3 {
+    text-align: center;
+    padding: 1em;
+  }
+
+  .menu-wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: column;
+    gap: 2em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .meal-container {
+    padding: 1em 0;
+    min-width: 40em;
+
+    @include media("<=tablet") {
+      min-width: 30em;
+    }
+  }
+
+  .meal-name {
+    padding-bottom: 1em;
+  }
+
+  .meal-options {
+    padding-bottom: 0.5em;
+  }
+
+  .meal-description {
+    line-height: 30px;
+    font-size: clamp(1.6rem, 1.5vw, 1.8rem);
+
+    @include media("<=tablet") {
+      line-height: 22px;
+    }
+
+    @include media("<=phoneL") {
+      line-height: 24px;
+    }
+  }
+
+  .meal-extras {
+    @include flex(columns, center, center);
+  }
+}

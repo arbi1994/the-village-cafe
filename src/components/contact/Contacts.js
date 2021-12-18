@@ -11,28 +11,28 @@ const Contacts = ({ title, providers, icons }) => {
       <div className="main">
         {providers?.map((provider, index) => {
           return (
-            <a 
-              key={index} 
-              className="wrapper" 
-              href={provider.href} 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img alt="" src={provider.logo} />
-            </a>
+              <a 
+                key={index} 
+                className="wrapper" 
+                href={provider.href} 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img alt="" src={provider.logo} />
+              </a>
           )
         }) || 
           icons?.map((icon, index) => {
             return (
-              <a 
-                key={index}
-                className="wrapper" 
-                href={icon.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {icon.img}
-              </a>
+                <a 
+                  key={index}
+                  className="wrapper" 
+                  href={icon.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {icon.img}
+                </a>
             )
           })
         }

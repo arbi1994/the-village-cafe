@@ -14,8 +14,7 @@ export default function Home() {
   }
 
   return (
-    <section className="home">
-      {/* <div className="home__hero"></div> */}
+    <section className="main home">
       <Hero 
         header={homeData.header} 
         subHeader={homeData.subHeader} 

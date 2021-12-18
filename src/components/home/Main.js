@@ -7,6 +7,7 @@ import imgRight from '../../assets/Images/Home/home-img-2.jpg';
 import imgBottom from '../../assets/Images/Home/home-img-3.jpg';
 
 export default function Main() {
+
   return (
     <main>
       <section className="container">
