@@ -4,22 +4,30 @@ main {
   background: white;
   width: 100%;
   position: relative;
+  padding: 100em 0 110em 0;
+
+  @include media("<=LGdesktop") {
+    padding: 60em 0 70em 0;
+  }
+
+  @include media("<=SMdesktop") {
+    padding: 50em 0 50em 0;
+  }
+
+  @include media("<=tablet") {
+    padding: 35em 0 40em 0;
+  }
+
+  @include media("<tablet") {
+    padding: 0;
+  }
 
   .container {
     width: 100%;
     min-height: 60vw;
     @include flex(row, center, center);
     z-index: 0;
-    margin: 70em 0;
     position: relative;
-
-    @include media("<=SMdesktop") {
-      margin: 40em 0;
-    }
-
-    @include media("<tablet") {
-      margin: 0;
-    }
 
     &:before {
       content: "";
@@ -58,12 +66,10 @@ main {
       height: 100%;
 
       .img-wrapper {
-        min-height: 80vh;
         @include flex(row, center, center);
         position: relative;
 
         @include media("<=SMdesktop") {
-          min-height: 50vh;
           margin: $desktop-padding;
         }
 
@@ -88,11 +94,11 @@ main {
 
         &__wrapper {
           width: 35vw;
-          min-height: 50em;
+          // min-height: 50em;
           @include flex(column, flex-start, center);
 
           @include media("<=SMdesktop") {
-            min-height: 25em;
+            // min-height: 25em;
             width: 768px;
             padding: $desktop-padding;
             padding-top: 2em;
@@ -123,7 +129,7 @@ main {
             margin-top: 4em;
             @include flex(row, center, center);
             text-decoration: none;
-            font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+            font-size: clamp(1.6rem, 1.5vw, 3.6rem);
             letter-spacing: 3px;
             color: $white-text-color;
             background: $brown-background;
@@ -173,19 +179,29 @@ main {
 }
 
 .first {
-  top: -35vw;
+  top: -45vw;
   left: 0;
   width: 45vw;
 
+  @include media("<=LGdesktop") {
+    top: -50vw;
+    width: 45vw;
+  }
+
+  @include media("<=desktop") {
+    top: -40vw;
+    width: 45vw;
+  }
+
   @include media("<=SMdesktop") {
     position: absolute;
-    top: -40vw;
+    top: -50vw;
     width: 40vw;
     height: 40vw;
   }
 
   @include media("<=tablet") {
-    top: -35vw;
+    top: -45vw;
   }
 
   @include media("<tablet") {
@@ -194,21 +210,29 @@ main {
 }
 
 .second {
-  top: -30vw;
+  top: -35vw;
   right: 0;
-  width: 35vw;
+  width: 34vw;
   margin-right: calc(10 * 1vw);
+
+  @include media("<=LGdesktop") {
+    top: -30vw;
+  }
+
+  @include media("<=desktop") {
+    top: -25vw;
+  }
 
   @include media("<=SMdesktop") {
     margin-right: 0;
     position: absolute;
-    top: -40vw;
+    top: -50vw;
     width: 40vw;
     height: 40vw;
   }
 
   @include media("<=tablet") {
-    top: -35vw;
+    top: -45vw;
   }
 
   @include media("<tablet") {
@@ -217,11 +241,15 @@ main {
 }
 
 .third {
-  width: 60vw;
-  height: 50vw;
-  bottom: -45vw;
+  width: 45vw;
+  height: 45vw;
+  bottom: -55vw;
   left: 50%;
   transform: translateX(-50%);
+
+  @include media("<=LGdesktop") {
+    bottom: -50vw;
+  }
 
   @include media("<=SMdesktop") {
     margin-right: 0;
@@ -230,7 +258,7 @@ main {
   }
 
   @include media("<=tablet") {
-    bottom: -45vw;
+    bottom: -52vw;
   }
 
   @include media("<tablet") {

@@ -22,7 +22,15 @@
 
   .meal-container {
     padding: 1em 0;
-    min-width: 35em;
+    min-width: 60em;
+
+    @include media("<=LGdesktop") {
+      min-width: 35em;
+    }
+
+    @include media("<=desktop") {
+      min-width: 35em;
+    }
 
     @include media("<=tablet") {
       min-width: 30em;
@@ -39,7 +47,7 @@
 
   .meal-description {
     line-height: 30px;
-    font-size: clamp(1.6rem, 1.5vw, 1.8rem);
+    font-size: clamp(1.6rem, 1.2vw, 3.4rem);
 
     @include media("<=tablet") {
       line-height: 22px;

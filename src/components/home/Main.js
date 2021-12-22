@@ -4,7 +4,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 // images
 import imgLeft from '../../assets/Images/Home/home-img-1.jpg';
 import imgRight from '../../assets/Images/Home/home-img-2.jpg';
-import imgBottom from '../../assets/Images/Home/home-img-3.jpg';
+import imgBottom from '../../assets/Images/Home/img-3.jpg';
 
 export default function Main() {
 

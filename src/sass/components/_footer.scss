@@ -25,7 +25,7 @@
   a {
     text-decoration: none;
     color: $brown-background;
-    font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.6rem, 1.2vw, 3.6rem);
 
     &:hover {
       text-decoration: underline;
@@ -33,7 +33,7 @@
   }
 
   strong {
-    font-size: clamp(1.8rem, 2.5vw, 2rem);
+    font-size: clamp(1.8rem, 1.5vw, 3.6rem);
   }
 
   &__top {
@@ -70,7 +70,7 @@
     &--contact {
       .main-container {
         color: $grey-text-color;
-        font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+        font-size: clamp(1.4rem, 1.2vw, 3rem);
         line-height: 30px;
       }
     }

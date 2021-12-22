@@ -72,7 +72,7 @@
 
     p {
       margin-top: 5.5vw;
-      line-height: clamp(25px, 4vw, 45px);
+      line-height: clamp(25px, 2.5vw, 75px);
       width: 100%;
 
       @include media("<=SMdesktop") {

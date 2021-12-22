@@ -1,19 +1,37 @@
 @use "../abstracts" as *;
 
-.parallax {
+.parallax-wrapper {
   width: 100%;
-  height: 40vh;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(62, 28, 0, 0.95);
+    z-index: "0";
+  }
 
   @include media("<=tablet") {
-    height: 20vh;
+    height: 30vh;
   }
 
   @include media("<=phoneL") {
-    height: 10vh;
+    height: 25vh;
   }
 
-  img {
+  .parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 }

@@ -19,8 +19,12 @@ body {
 }
 
 #root {
-  background: white;
+  // background: white;
   overflow-x: hidden;
+}
+
+.main {
+  background: white;
 }
 
 ::selection {

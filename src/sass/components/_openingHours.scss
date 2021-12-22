@@ -7,12 +7,28 @@
 
   .header {
     height: 8vw;
+
+    @include media("<=tablet") {
+      height: 10vw;
+    }
+
+    @include media("<=phoneL") {
+      height: 15vw;
+    }
   }
 
   .wrapper {
     height: 100%;
-    min-width: 40em;
+    min-width: 60em;
     padding-bottom: 2em;
+
+    @include media("<=LGdesktop") {
+      min-width: 50em;
+    }
+
+    @include media("<=desktop") {
+      min-width: 40em;
+    }
 
     @include media("<=tablet") {
       min-width: 30em;
@@ -24,10 +40,23 @@
 
     .hours {
       @include flex(row, space-between, center);
-      padding: 1em 0;
+      padding: 2em 0;
+
+      @include media("<=LGdesktop") {
+        padding: 1em 0;
+      }
+
+      @include media("<=phoneL") {
+        padding: 0;
+      }
 
       h4 {
         font-style: italic;
+        flex: 1;
+      }
+
+      p {
+        text-align: right;
       }
     }
   }
