@@ -7,11 +7,11 @@ main {
   padding: 100em 0 110em 0;
 
   @include media("<=LGdesktop") {
-    padding: 60em 0 70em 0;
+    padding: 70em 0;
   }
 
   @include media("<=SMdesktop") {
-    padding: 50em 0 50em 0;
+    padding: 50em 0;
   }
 
   @include media("<=tablet") {

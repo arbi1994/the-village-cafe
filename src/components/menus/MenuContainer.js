@@ -1,6 +1,7 @@
 import React from 'react';
 // utils
 import { food, drinks } from '../../utils/menu';
+import MenuModal from './MenuModal';
 
 const MenuContainer = ({ selectedBtn }) => {
 
@@ -21,12 +22,27 @@ const MenuContainer = ({ selectedBtn }) => {
       if(key === 'alcohol') return 'WINE & BEER & COCKTAILS'
     }
   }
+
+  const renderMenuModal = key => {
+    console.log(key)
+    if(selectedBtn === "EAT"){
+      return key === 'breakfast' 
+          || key === 'lightMeals'
+          || key === 'sandwiches'
+          || key === 'mainMeals'
+          || key === 'salads'
+      ? <MenuModal /> : null
+    }
+  }
   
   const container = Object.entries(selectedBtn === "EAT" ? food : drinks).map((key, value) => {
 
     return (
       <div key={value} className="menu__container">
-        <h3>{title(key[0])}</h3>
+        <div className="menu__container--title">
+          <h3>{title(key[0])}</h3>
+          {renderMenuModal(key[0])}
+        </div>
     
         <div className="menu-wrapper">
           {key[1]?.map(meal => (

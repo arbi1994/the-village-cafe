@@ -5,8 +5,14 @@
   height: 60vh;
   overflow: hidden;
   position: relative;
+  @include flex(column, center, center);
+  padding: $desktop-padding;
 
-  &:after {
+  @include media("<tablet") {
+    padding: $mobile-padding;
+  }
+
+  &:before {
     content: "";
     position: absolute;
     top: 0;
@@ -33,5 +39,34 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+  }
+
+  h2,
+  a {
+    z-index: 1;
+    color: $white-text-color;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: clamp(1.8rem, 5vw, 3.8rem);
+    padding-top: 1em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    letter-spacing: 4px;
+
+    @include media("<tablet") {
+      letter-spacing: 2px;
+    }
+
+    @include media("<phoneL") {
+      letter-spacing: 0.5px;
+    }
   }
 }

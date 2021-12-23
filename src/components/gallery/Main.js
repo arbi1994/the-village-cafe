@@ -4,8 +4,6 @@ import { SRLWrapper } from 'simple-react-lightbox';
 import gallery from '../../utils/gallery';
 
 const Main = () => {
-  console.log(gallery)
-
   return (
     <SRLWrapper>
       <div className="gallery-main">

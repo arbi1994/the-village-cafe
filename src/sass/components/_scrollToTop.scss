@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.scroll-to-top {
+  border: none;
+  position: fixed;
+  bottom: 15vh;
+  right: 4vw;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background: $cream-background;
+  color: $brown-background;
+  @include flex(row, center, center);
+  cursor: pointer;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  box-shadow: 4px 4px 10px 0px rgb(0 0 0 / 10%);
+  transition: all 0.35s ease;
+  visibility: hidden;
+  z-index: 4;
+
+  &.active {
+    visibility: visible;
+
+    &:hover {
+      background: $brown-background;
+      color: $cream-background;
+      border: 1px solid $cream-background;
+    }
+  }
+}

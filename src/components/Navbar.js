@@ -35,7 +35,7 @@ const Navbar = ({ headerHeight }) => {
 
       if(scrollTop >= headerHeight - navHeight && width > breakpoints.tablet){
         ref.current.classList.add('is-sticky')
-        document.querySelector(".main").style.paddingTop = "10em"
+        document.querySelector(".main").style.paddingTop = "12em"
       }else {
         ref.current.classList.remove('is-sticky')
         document.querySelector(".main").style.paddingTop = "0"
@@ -46,6 +46,12 @@ const Navbar = ({ headerHeight }) => {
     
     return () => window.removeEventListener('scroll', isSticky)
   })
+
+  useEffect(() => {
+    menuClicked 
+    ? document.querySelector("body").style.overflowY = "hidden"
+    : document.querySelector("body").style.overflowY = "auto"
+  }, [menuClicked])
 
   return (
     <nav ref={ref}>

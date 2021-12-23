@@ -4,11 +4,8 @@ import {
   Routes, 
   Route,
 } from 'react-router-dom';
-import { ParallaxProvider } from 'react-scroll-parallax';
 // hooks 
 import ScrollRestoration from '../hooks/useScrollRestoration';
-import ParallaxCache from '../hooks/useParallaxCache';
-
 // components
 import Header from './Header';
 import Home from './home/Home';
@@ -18,11 +15,11 @@ import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 import FooterTop from './FooterTop';
 import Footer from './Footer';
+import ScrollToTopBtn from './ScrollToTopBtn';
 import PageNotFound from './PageNotFound';
 
 function App() {
   return (
-  
     <Router>
       <Header />
         <ScrollRestoration />
@@ -34,10 +31,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <FooterTop />
+      <FooterTop />
       <Footer />
+      <ScrollToTopBtn />
     </Router>
-   
   )
 }
 
