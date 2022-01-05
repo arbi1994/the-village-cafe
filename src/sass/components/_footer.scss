@@ -45,6 +45,11 @@
     padding-top: 2em;
     padding-bottom: 2em;
 
+    /* iPad Pro */
+    @media screen and (min-width: 1024px) and (min-height: 1366px) {
+      min-height: 30vh;
+    }
+
     @include media("<tablet") {
       @include flex(column, flex-start, flex-start);
       padding: $mobile-padding;
@@ -98,7 +103,7 @@
   &__bottom {
     min-height: 10vh;
     padding: $desktop-padding;
-    @include flex(row, space-between, flex-start);
+    @include flex(row, space-between, center);
     flex-wrap: wrap;
     color: $grey-text-color;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
@@ -108,12 +113,21 @@
       padding: $mobile-padding;
     }
 
+    &--left {
+      padding-bottom: 1em;
+      margin-right: 3em;
+    }
+
     &--right {
       @include flex(row, center, center);
 
       span {
         font-size: clamp(1.2rem, 2.5vw, 1.6rem);
         margin-right: 0.5em;
+      }
+
+      a {
+        padding-left: 0.5vw;
       }
 
       img {

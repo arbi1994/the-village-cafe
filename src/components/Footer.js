@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import navLinks from '../utils/navigation';
 import currentYear from '../utils/currentYear';
 // images
-import developerLogo from '../assets/Images/Logo/RB.svg';
+import developerLogo from '../assets/Images/Logo/dev_logo.svg';
 
 export default function Footer() {
   const menu = navLinks.map((link, index) => {
@@ -68,7 +68,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="footer__bottom--left">
-          Copyright &copy; &nbsp; &#8226; &nbsp; {currentYear()} The Village Cafe &nbsp; &#8226; &nbsp; All Rights Reserved
+          Copyright &copy; {currentYear()} &nbsp; &#8226; &nbsp; The Village Cafe &nbsp; &#8226; &nbsp; All Rights Reserved
         </div>
         <div className="footer__bottom--right">
           <span>Made by</span>

@@ -36,14 +36,16 @@ nav {
     @include flex(column, center, center);
     position: fixed;
     top: 0;
-    right: 0;
+    right: -1000px;
     width: 100%;
     max-width: 425px;
     min-height: 100vh;
-    display: none;
+    // display: none;
+    transition: right 0.35s ease;
 
     &.active {
-      display: block;
+      // display: block;
+      right: 0;
       z-index: 5;
       overflow-y: scroll;
     }
@@ -59,13 +61,14 @@ nav {
     @include flex(column, flex-start, baseline);
     position: absolute;
     top: 0;
-    right: 0;
+    right: -1000px;
     padding-top: 15vh;
     background: white;
     display: none;
 
     &.active {
       display: block;
+      right: 0;
       min-height: 100vh;
     }
   }

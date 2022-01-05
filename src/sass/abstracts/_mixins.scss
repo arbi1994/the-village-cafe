@@ -4,3 +4,11 @@
   justify-content: $content;
   align-items: $align;
 }
+
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
