@@ -24,7 +24,7 @@ header {
     z-index: 0;
     pointer-events: none;
 
-    @include media("<=LGdesktop"){
+    @include media("<=LGdesktop") {
       height: 25em;
     }
 
@@ -35,6 +35,7 @@ header {
 
     @include media("<=tablet") {
       bottom: 0;
+      height: 18em;
     }
 
     @include media("<tablet") {
@@ -54,13 +55,25 @@ header {
 
     .left {
       height: 30em;
+      max-width: 18em;
+      z-index: 1;
 
-      @include media("<=LGdesktop"){
+      @include media("<=LGdesktop") {
         height: 25em;
+      }
+
+      @include media("<=tablet") {
+        height: 18em;
       }
 
       @include media("<tablet") {
         height: 100%;
+      }
+
+      .logo {
+        height: 100%;
+        width: 100%;
+        @include flex(row, center, center);
       }
 
       .logo > img {
@@ -68,7 +81,7 @@ header {
         max-height: 30em;
         min-width: 10em;
 
-        @include media("<=LGdesktop"){
+        @include media("<=LGdesktop") {
           max-height: 25em;
         }
       }

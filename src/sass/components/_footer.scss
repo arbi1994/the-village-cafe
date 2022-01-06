@@ -42,8 +42,8 @@
     @include flex(row, flex-start, center);
     flex-wrap: wrap;
     padding: $desktop-padding;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 10em;
+    padding-bottom: 10em;
 
     /* iPad Pro */
     @media screen and (min-width: 1024px) and (min-height: 1366px) {
@@ -103,6 +103,8 @@
   &__bottom {
     min-height: 10vh;
     padding: $desktop-padding;
+    padding-top: 5em;
+    padding-bottom: 5em;
     @include flex(row, space-between, center);
     flex-wrap: wrap;
     color: $grey-text-color;

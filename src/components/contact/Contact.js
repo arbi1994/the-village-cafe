@@ -46,7 +46,7 @@ export default function Contact() {
         img: <FacebookIcon sx={{ fontSize: '6vw', color: '#4267B2'}}/>,
       },
       {
-        href: "https://www.facebook.com/The-Village-Cafe-348418458561128" ,
+        href: "https://www.instagram.com/thevillagecafebalwyn/" ,
         img: <InstagramIcon sx={{ fontSize: '6vw', color: '#3f729b'}}/>,
       },
     ]

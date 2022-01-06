@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 
 const ScrollToTopBtn = () => {
   const [showButton, setShowButton] = useState(false)
@@ -26,7 +27,7 @@ const ScrollToTopBtn = () => {
       onClick={handleScrollToTop} 
       className={`scroll-to-top ${showButton ? 'active' : null}`}
     >
-      Top
+      <KeyboardArrowUpRoundedIcon sx={{fontSize: '4rem'}}/>
     </button>
   )
 }
