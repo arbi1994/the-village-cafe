@@ -105,7 +105,7 @@
     padding: $desktop-padding;
     padding-top: 5em;
     padding-bottom: 5em;
-    @include flex(row, space-between, center);
+    @include flex(row, space-between, flex-start);
     flex-wrap: wrap;
     color: $grey-text-color;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
@@ -116,12 +116,12 @@
     }
 
     &--left {
-      padding-bottom: 1em;
       margin-right: 3em;
+      margin-bottom: 2em;
     }
 
     &--right {
-      @include flex(row, center, center);
+      @include flex(row, center, flex-start);
 
       span {
         font-size: clamp(1.2rem, 2.5vw, 1.6rem);
@@ -130,6 +130,15 @@
 
       a {
         padding-left: 0.5vw;
+        position: relative;
+        bottom: 10px;
+
+        @include media("<=SMdesktop") {
+          bottom: 5px;
+        }
+
+        @include media("<=tablet") {
+        }
       }
 
       img {

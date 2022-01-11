@@ -10,17 +10,19 @@
   border-radius: 50%;
   background: $cream-background;
   color: $brown-background;
-  @include flex(row, center, center);
+  @include flex(row, center, flex-start);
   cursor: pointer;
   font-size: clamp(1.2rem, 1.5vw, 1.6rem);
   box-shadow: 4px 4px 10px 0px rgb(0 0 0 / 10%);
   transition: background 0.35s ease;
-  visibility: hidden;
   z-index: 4;
 
-  &.active {
-    visibility: visible;
+  @include media("<=phoneL"){
+    width: 3em;
+    height: 3em;
+  }
 
+  &.active {
     @include hover-supported {
       &:hover {
         background: $brown-background;

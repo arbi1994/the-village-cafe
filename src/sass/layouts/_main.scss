@@ -94,8 +94,15 @@ main {
 
         &__wrapper {
           width: 35vw;
-          // min-height: 50em;
           @include flex(column, flex-start, center);
+          opacity: 0;
+          transform: translateY(20%);
+
+          &.fadeIn {
+            opacity: 1;
+            transform: translateY(0%);
+            transition: all 0.8s ease-in-out;
+          }
 
           @include media("<=SMdesktop") {
             // min-height: 25em;
@@ -182,6 +189,7 @@ main {
   top: -45vw;
   left: 0;
   width: 45vw;
+  opacity: 0;
 
   @include media("<=LGdesktop") {
     top: -50vw;
@@ -214,6 +222,7 @@ main {
   right: 0;
   width: 34vw;
   margin-right: calc(10 * 1vw);
+  opacity: 0;
 
   @include media("<=LGdesktop") {
     top: -30vw;
@@ -246,6 +255,7 @@ main {
   bottom: -55vw;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
 
   @include media("<=LGdesktop") {
     bottom: -50vw;

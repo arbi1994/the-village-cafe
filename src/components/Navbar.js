@@ -64,10 +64,10 @@ const Navbar = ({ headerHeight }) => {
           : <CloseRoundedIcon fontSize="large"/>
         }
       </div>
-      <div className={!menuClicked ? "inner-wrapper" : "inner-wrapper active"}>
-        <ul className={!menuClicked ? "navbar" : "navbar active"}>
+      <div className={`inner-wrapper ${menuClicked ? 'active' : ''}`}>
+        <ul className={`navbar ${menuClicked ? 'active' : ''}`}>
           {navigation.map(nav => 
-            <li key={nav.id}  onClick={handleLinkClick}>
+            <li key={nav.id} onClick={handleLinkClick}>
               <Link 
                 className="nav-link underlined underlined--offset" 
                 to={nav.path}

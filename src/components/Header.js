@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logoDesktop from '../assets/Images/Logo/logo-desktop.svg';
 import logoTablet from '../assets/Images/Logo/logo-tablet.svg';
 import logoPhone from '../assets/Images/Logo/logo-mobile.svg';
-import headerImg from '../assets/Images/Header/Header-top-center.svg';
+import headerImg from '../assets/Images/Header/header-top-center.svg';
 // components
 import Navbar from './Navbar';
 

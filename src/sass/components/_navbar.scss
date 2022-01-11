@@ -40,12 +40,10 @@ nav {
     width: 100%;
     max-width: 425px;
     min-height: 100vh;
-    // display: none;
-    transition: right 0.35s ease;
 
     &.active {
-      // display: block;
       right: 0;
+      transition: right 0.35s ease;
       z-index: 5;
       overflow-y: scroll;
     }
@@ -61,14 +59,13 @@ nav {
     @include flex(column, flex-start, baseline);
     position: absolute;
     top: 0;
-    right: -1000px;
+    right: 0;
     padding-top: 15vh;
     background: white;
     display: none;
 
     &.active {
       display: block;
-      right: 0;
       min-height: 100vh;
     }
   }
